@@ -243,4 +243,4 @@ async def copy(ctx):
     # help.add_field(name='Announcement', value='')
 
 
-bot.run("Njk0MTAzMDIzNTA4NTIxMDAx.XoGv0A.WEQQ8p6cBrY0lEXdGjXUo7Qcj2Q")
+bot.run("key")
