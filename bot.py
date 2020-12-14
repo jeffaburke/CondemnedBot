@@ -67,16 +67,15 @@ async def rules(ctx):
     async for x in ctx.channel.history(limit=1):
         mgs.append(x)
     await ctx.channel.delete_messages(mgs)
-    rulesEmbed = discord.Embed(color=discord.Color.blurple(), timestamp=datetime.datetime.now(), title="RULES")
+    rulesEmbed = discord.Embed(color=discord.Color.blurple(), title='Discord rules and Game rules can work one in the same.\n\nRULES', description = '>>> 🔸 Do not glitch, exploit, cheat, in any way!\n🔸 Do not call out cheaters, suspicious players, or rule breakers in game!\n🔸 Please follow specific server rules including the team limits on certain servers.\n🔸 Breaking specific server rules will result in a permanent ban from all our servers. \n🔸 Report cheaters, suspicious players, or rule breakers to a moderator or admin on Discord.\n🔸 Purposely false reporting someone will get you\'re self banned.\n🔸 Keep Racism / Homophobia / Sexism to you\'re self, do not cross the line or harass a player.\n🔸 Don\'t be too toxic in game or Discord. This could result in a permanent ban both Discord and game side.\n🔸 Keep discord and server chats clean and stay on specific game topics.\n🔸 Our servers are for gaming they are NOT personal chat rooms.\n🔸 Do not post NSFW content - We do not have a NSFW channel.\n🔸 Use the Discord channels properly, or you will be blocked from that channel or banned from the Discord.\n🔸 Ear-Rape, Screaming behavior is not welcome.\n🔸 Do not advertise - No unsolicited invite links or advertisements.\n🔸 IP grabbing and DOSing (even threats of doing so) will result in a swift ban with ZERO appeal chance.  (It is illegal under the Federal Computer Fraud and Abuse Act)\n\nPlease keep in mind our server moderators are chat moderators and only have access to mute players. Our admins are all adults and are not allowed to actually play. Our admins review player reports and watch over suspicious players and do server side work. Falsely accusing a staff member will result in a permanent ban or permanent mute we are very strict about that! If you think someone might be cheating and our admins don\'t ban them that\'s because there is lack of evidence or they are legit. We highly recommend Steam reporting a players steam account if you think they are cheating they will get a game ban pretty quickly if they actually are.')
     rulesEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
     rulesEmbed.set_thumbnail(url="https://media.giphy.com/media/odFbqUcQPDVeE7bpnA/giphy.gif")
     rulesEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
-    rulesEmbed.add_field(name = 'Server Rules', value = '>>> :small_orange_diamond:Don\'t glitch/exploit/cheat/ in any way!\n:small_orange_diamond:Don\'t call out cheaters or suspicious players in game!\n:small_orange_diamond:Use F7 to report players or anything ( It goes right to server staff! )', inline = False)
-    rulesEmbed.add_field(name = 'Discord Rules', value = '>>> :small_orange_diamond: Do not post NSFW content - We do not have a NSFW channel.\n:small_orange_diamond: Do not spam within any text channel.\n:small_orange_diamond: Toxic behavior is not welcome within our server.\n:small_orange_diamond: Ear-Rape, Screaming behavior within any Voice Channel is not welcome.\n:small_orange_diamond: Do not advertise - No unsolicited invite links or advertisements.\n:small_orange_diamond: Keep Racism / Homophobia / Sexism to a limit, do not cross the line.\n:small_orange_diamond: No Sharing Bot/ User Tokens / User Login Information.\n:small_orange_diamond: No Doxing - Do not post another member\'s personal information , not without his or her permission.\n:small_orange_diamond: DoS / DDoS is not allowed here , as well as discussions about how to do DoS and DDoS attacks.\n:small_orange_diamond: Don\'t break the Discord ToS. (Terms Of Service)', inline = False)
+    #rulesEmbed.add_field(name = 'RULES', value = '>>> 🔸 Do not glitch, exploit, cheat, in any way!\n🔸 Do not call out cheaters, suspicious players, or rule breakers in game!\n🔸 Please follow specific server rules including the team limits on certain servers.\n🔸 Breaking specific server rules will result in a permanent ban from all our servers. \n🔸 Report cheaters, suspicious players, or rule breakers to a moderator or admin on Discord.\n🔸 Purposely false reporting someone will get you\'re self banned.\n🔸 Keep Racism / Homophobia / Sexism to you\'re self, do not cross the line or harass a player.\n🔸 Don\'t be too toxic in game or Discord. This could result in a permanent ban both Discord and game side.\n🔸 Keep discord and server chats clean and stay on specific game topics.\n🔸 Our servers are for gaming they are NOT personal chat rooms.\n🔸 Do not post NSFW content - We do not have a NSFW channel.\n🔸 Use the Discord channels properly, or you will be blocked from that channel or banned from the Discord.\n🔸 Ear-Rape, Screaming behavior is not welcome.\n🔸 Do not advertise - No unsolicited invite links or advertisements.\n🔸 IP grabbing and DOSing (even threats of doing so) will result in a swift ban with ZERO appeal chance.  (It is illegal under the Federal Computer Fraud and Abuse Act)', inline = False)
     await ctx.send(embed=rulesEmbed)
-    memEmbed = discord.Embed(color=discord.Color.green(), timestamp=datetime.datetime.now(), title="CONFIRM")
+    memEmbed = discord.Embed(color=discord.Color.green(), title="CONFIRM")
     memEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
-    memEmbed.add_field(name = 'Agreeing to Server Rules', value = 'By clicking the :white_check_mark: below this message, you are agreeing & confirming to all server rules to gain access to Condemned Gaming!', inline = False)
+    memEmbed.add_field(name = 'Agreeing to Server Rules', value = 'By clicking the :white_check_mark: below this message, you are agreeing & confirming to all server rules to gain access to Role assignment', inline = False)
     await ctx.send(embed=memEmbed)
 
 @rules.error
@@ -92,8 +91,8 @@ async def rules_error(ctx, error):
             rulesEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/avatars/694103023508521001/37276cf5add1f22056c130c0fb0fb43f.png?size=128")
             rulesEmbed.set_thumbnail(url="https://media.giphy.com/media/odFbqUcQPDVeE7bpnA/giphy.gif")
             rulesEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
-            rulesEmbed.add_field(name = 'Server Rules', value = '>>> :small_orange_diamond:Don\'t glitch/exploit/cheat/ in any way!\n:small_orange_diamond:Don\'t call out cheaters or suspicious players in game!\n:small_orange_diamond:Use F7 to report players or anything ( It goes right to server staff! )', inline = False)
-            rulesEmbed.add_field(name = 'Discord Rules', value = '>>> :small_orange_diamond: Do not post NSFW content - We do not have a NSFW channel.\n:small_orange_diamond: Do not spam within any text channel.\n:small_orange_diamond: Toxic behavior is not welcome within our server.\n:small_orange_diamond: Ear-Rape, Screaming behavior within any Voice Channel is not welcome.\n:small_orange_diamond: Do not advertise - No unsolicited invite links or advertisements.\n:small_orange_diamond: Keep Racism / Homophobia / Sexism to a limit, do not cross the line.\n:small_orange_diamond: No Sharing Bot/ User Tokens / User Login Information.\n:small_orange_diamond: No Doxing - Do not post another member\'s personal information , not without his or her permission.\n:small_orange_diamond: DoS / DDoS is not allowed here , as well as discussions about how to do DoS and DDoS attacks.\n:small_orange_diamond: Don\'t break the Discord ToS. (Terms Of Service)', inline = False)
+            rulesEmbed.add_field(name = 'Server Rules', value = '>>> 🔸Don\'t glitch/exploit/cheat/ in any way!\n🔸Don\'t call out cheaters or suspicious players in game!\n🔸Use F7 to report players or anything ( It goes right to server staff! )', inline = False)
+            rulesEmbed.add_field(name = 'Discord Rules', value = '>>> 🔸 Do not post NSFW content - We do not have a NSFW channel.\n🔸 Do not spam within any text channel.\n🔸 Toxic behavior is not welcome within our server.\n🔸 Ear-Rape, Screaming behavior within any Voice Channel is not welcome.\n🔸 Do not advertise - No unsolicited invite links or advertisements.\n🔸 Keep Racism / Homophobia / Sexism to a limit, do not cross the line.\n🔸 No Sharing Bot/ User Tokens / User Login Information.\n🔸 No Doxing - Do not post another member\'s personal information , not without his or her permission.\n🔸 DoS / DDoS is not allowed here , as well as discussions about how to do DoS and DDoS attacks.\n🔸 Don\'t break the Discord ToS. (Terms Of Service)', inline = False)
             await ctx.author.send(embed = rulesEmbed)
         except discord.Forbidden:
             await ctx.send(f'{ctx.author.mention}, I couldn\'t send a message to you.')
@@ -110,14 +109,14 @@ async def staffApp(ctx):
     modEmbed.set_thumbnail(url="https://cdn.discordapp.com/avatars/754812042212278493/07545bb3c197a2ccc10eb201abf4dccc.png?size=256")
     modEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/avatars/754812042212278493/07545bb3c197a2ccc10eb201abf4dccc.png?size=256")
     modEmbed.add_field(name = 'Moderator Description', value = '>>> Moderators roles are to watch over server chat with the ability to mute highly toxic players that are spamming server chat and the ability to kick or ban racists players or players threatening the server in any way for example a ddos threat we take serious and that player should be banned. Players who disrespect the server or staff repeatedly will then be giving a warning and tell them to leave if they don\'t like it here if it continues please mute them for 30 minutes, if they continue after you unmute them the decision is then up to you with kick, ban or permanent mute. If moderators find any problems after a wipe they need to report it to a admin immediately. Moderators are also welcomed to help new players that join the server and if any players need help with verifying their steam account with the discord. Moderators are to report any suspicious players to admins they will then be reviewed before the decision is made to place a ban.', inline = False)
-    modEmbed.add_field(name = 'Moderator 𝙍𝙚𝙦𝙪𝙞𝙧𝙚𝙢𝙚𝙣𝙩𝙨', value = '>>> :small_orange_diamond: 17+ years old.\n:small_orange_diamond: 500+ rust hours.•Active on our server.\n:small_orange_diamond: Active atleast 2-3 days per week.\n:small_orange_diamond: Active daily on discord.\n:small_orange_diamond: Can be online on most wipe days.\n:small_orange_diamond: Speaking spanish is + but not needed.', inline = False)
+    modEmbed.add_field(name = 'Moderator 𝙍𝙚𝙦𝙪𝙞𝙧𝙚𝙢𝙚𝙣𝙩𝙨', value = '>>> 🔸 17+ years old.\n🔸 500+ rust hours.•Active on our server.\n🔸 Active atleast 2-3 days per week.\n🔸 Active daily on discord.\n🔸 Can be online on most wipe days.\n🔸 Speaking spanish is + but not needed.', inline = False)
     await ctx.send(embed=modEmbed)
     adminEmbed = discord.Embed(color=discord.Color.red(), timestamp=datetime.datetime.now(), title="Administrator Applications")
     adminEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/avatars/754812042212278493/07545bb3c197a2ccc10eb201abf4dccc.png?size=256")
     adminEmbed.set_thumbnail(url="https://cdn.discordapp.com/avatars/754812042212278493/07545bb3c197a2ccc10eb201abf4dccc.png?size=256")
     adminEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/avatars/754812042212278493/07545bb3c197a2ccc10eb201abf4dccc.png?size=256")
     adminEmbed.add_field(name = 'Administrator Description', value = '>>> Admin roles are to watch over the reported players and help with server stuff. Admins are NOT allowed to PLAY on the server they are administrating on. Admins are granted access to server console logs which have handy tools to show cheaters and players or moderators breaking the server rules. Admins must try to be online on wipe days.', inline = False)
-    adminEmbed.add_field(name = 'Administrator 𝙍𝙚𝙦𝙪𝙞𝙧𝙚𝙢𝙚𝙣𝙩𝙨', value = '>>> :small_orange_diamond: 21+ years old.\n:small_orange_diamond: 1000+ rust hours.\n:small_orange_diamond: Active on our server.\n:small_orange_diamond: Active atleast 2-3 days per week.\n:small_orange_diamond: Active daily on discord.\n:small_orange_diamond: Can be online on most wipe days.\n:small_orange_diamond: Coding, plugins, cs and json files knowledge is a + but not needed.\n:small_orange_diamond: Speaking spanish is a + but not needed', inline = False)
+    adminEmbed.add_field(name = 'Administrator 𝙍𝙚𝙦𝙪𝙞𝙧𝙚𝙢𝙚𝙣𝙩𝙨', value = '>>> 🔸 21+ years old.\n🔸 1000+ rust hours.\n🔸 Active on our server.\n🔸 Active atleast 2-3 days per week.\n🔸 Active daily on discord.\n🔸 Can be online on most wipe days.\n🔸 Coding, plugins, cs and json files knowledge is a + but not needed.\n🔸 Speaking spanish is a + but not needed', inline = False)
     await ctx.send(embed=adminEmbed)
     intEmbed = discord.Embed(color=discord.Color.blue(), timestamp=datetime.datetime.now(), title="Interested in applying")
     intEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/avatars/754812042212278493/07545bb3c197a2ccc10eb201abf4dccc.png?size=256")
@@ -126,12 +125,40 @@ async def staffApp(ctx):
 
 @bot.command(pass_context=True)
 @commands.has_guild_permissions(administrator = True)
-async def howToVer(ctx):
+async def gra(ctx):
     mgs = []
     async for x in ctx.channel.history(limit=1):
         mgs.append(x)
     await ctx.channel.delete_messages(mgs)
-    HTVEmbed = discord.Embed(color=discord.Color.gold(), timestamp=datetime.datetime.now())
+    assignEmbed = discord.Embed(color=discord.Color.gold(), title="GAME ROLE ASSIGNMENT")
+    assignEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
+    assignEmbed.set_thumbnail(url="https://media.giphy.com/media/odFbqUcQPDVeE7bpnA/giphy.gif")
+    assignEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
+    assignEmbed.add_field(name = 'Why?', value = '*Assign yourself roles to view specific game channels. React with the specified game icon that you\'d like to view the text and voice channels for.\nLooking for additional roles? Please message <@325103571869892609> for more help.*', inline = False)
+    assignEmbed.add_field(name = 'Games', value = f'<:rust:784324864739639296> <@&787872856348426240>\n<:siege:787872435709018132> <@&787872878179123200>\n<:fivem:784324844031967242> <@&787872829215342593>\n<:ark:784323982211285002> <@&787872808238579742>', inline = False)
+    await ctx.send(embed=assignEmbed)
+
+@bot.command(pass_context=True)
+@commands.has_guild_permissions(administrator = True)
+async def csfm(ctx):
+    mgs = []
+    async for x in ctx.channel.history(limit=1):
+        mgs.append(x)
+    await ctx.channel.delete_messages(mgs)
+    csfmEmbed = discord.Embed(color=discord.Color.gold(), timestamp=datetime.datetime.now(), title="FiveM Server Coming Soon", description='We are excited to announce that we are currently working on developing a FiveM server, so get prepared because this is going to be a great addition to the Condemned Gaming Organization')
+    csfmEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
+    csfmEmbed.set_thumbnail(url="https://media.giphy.com/media/odFbqUcQPDVeE7bpnA/giphy.gif")
+    csfmEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
+    await ctx.send(embed=csfmEmbed)
+
+@bot.command(pass_context=True)
+@commands.has_guild_permissions(administrator = True)
+async def howToVerR(ctx):
+    mgs = []
+    async for x in ctx.channel.history(limit=1):
+        mgs.append(x)
+    await ctx.channel.delete_messages(mgs)
+    HTVEmbed = discord.Embed(color=discord.Color.gold())
     HTVEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/avatars/694103023508521001/37276cf5add1f22056c130c0fb0fb43f.png?size=128")
     HTVEmbed.set_thumbnail(url="https://media.giphy.com/media/odFbqUcQPDVeE7bpnA/giphy.gif")
     HTVEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
@@ -141,21 +168,21 @@ async def howToVer(ctx):
 
 @bot.command(pass_context=True)
 @commands.has_guild_permissions(administrator = True)
-async def verify(ctx):
+async def rverify(ctx):
     mgs = []
     async for x in ctx.channel.history(limit=1):
         mgs.append(x)
     await ctx.channel.delete_messages(mgs)
-    verifyEmbed = discord.Embed(color=discord.Color.blurple(), timestamp=datetime.datetime.now(), title="Verify you're Discord with our Rust server.")
+    verifyEmbed = discord.Embed(color=discord.Color.blurple(), title="Verify you're Discord with our Rust server.")
     verifyEmbed.set_footer(text = "Condemned Staff", icon_url="https://cdn.discordapp.com/avatars/694103023508521001/37276cf5add1f22056c130c0fb0fb43f.png?size=128")
     verifyEmbed.set_thumbnail(url="https://media.giphy.com/media/odFbqUcQPDVeE7bpnA/giphy.gif")
     verifyEmbed.set_author(name="Condemned Gaming Organization", icon_url="https://cdn.discordapp.com/attachments/660930305317797899/765051209618161665/image_5.gif")
-    verifyEmbed.add_field(name = 'Follow the simple steps below.', value = '>>> 1) Go in game and type /verify\n2) Send the code to the "<@754812042212278493>" Bot or the "<@763247660743786557>" Bot on Discord for the server you are trying to verify on.\n', inline = False)
+    verifyEmbed.add_field(name = 'Follow the simple steps below.', value = '>>> 1) Go in game and type /verify\n2) Send the code to the servers bot in which you want to verify with.\n', inline = False)
     verifyEmbed.add_field(name = 'This Unlocks:', value = '>>> • Discord Channels\n• Server skip queue\n• Colored Chat', inline = False)
     verifyEmbed.add_field (name = "Extra Information", value = 'Please note the Bots are on the top right side listed under <@&694105892655726592>\nIf you have any problems join the Help! Voice channel and DM <@&740631930189643826>\n', inline = False)
     await ctx.send(embed=verifyEmbed)
 
-@verify.error
+@rverify.error
 async def verify_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         mgs = []
@@ -243,4 +270,4 @@ async def copy(ctx):
     # help.add_field(name='Announcement', value='')
 
 
-bot.run("key")
+bot.run("Njk0MTAzMDIzNTA4NTIxMDAx.XoGv0A.-97N8m1nPHa7Q3UvXAfd6TEhGrU")
